@@ -1,0 +1,115 @@
+""""
+# Задание 1
+import math
+
+
+def main(d):
+    y = float(d)
+    z = math.pow(math.log(y, 10), 4)
+    m = (math.pow((79 * y - 51 * math.pow(y, 3)), 5) + math.atan(y) / 75)
+    f = (24 * math.pow((28 * y - (y * y / 39)), 5) + math.pow(y, 4))
+    g = (8 * math.pow(y, 3))
+    k = math.sqrt(f / g)
+    return z / m + k
+"""
+
+"""
+# Задание 2
+import math
+
+
+def main(d):
+    y = float(d)
+    if y < 6:
+        z = 1-72*(math.pow(28*y+math.pow(y, 3), 7))
+    elif 6 <= y < 23:
+        z = 97*math.pow((y*y+13+(y/52)), 4)+47*math.exp(5)*y*y
+    else:
+        z = 47*math.pow(math.atan(y/71), 6) - 1
+    return z
+"""
+
+"""
+# Задание 3
+import math
+
+
+def main(a, m):
+    a = int(a)
+    m = int(m)
+    s1 = 0
+    s2 = 0
+    for c in range(1, a+1):
+        s1 += (1+73*math.pow(math.sin(c), 4))
+    for k in range(1, m+1):
+        for i in range(1, a+1):
+            s2 += math.pow(math.log(k, 10), 4)
+            s2 += math.pow((k*k-40*math.pow(i, 3)-1), 5)
+    return s1 - s2
+
+print(main(8, 5))
+"""
+
+
+"""
+# Задание 4
+import math
+
+
+def main(d):
+    n = int(d)
+    if n == 0:
+        return 0.01
+    else:
+        k = math.atan(math.pow(main(n-1), 3)-1)
+        return 1 + 45*math.pow(k, 3) + main(n-1)
+
+print(main(6))
+"""
+
+
+"""
+# Задание 5
+import math
+
+
+def main(x):
+    n = len(x)
+    s1 = 0
+    for i in range(1, n+1):
+        k = math.pow(x[n-i], 3)
+        m = 50*math.pow(x[n-i], 2)
+        s1 += 4*math.pow((k - m), 5)
+    return s1
+
+print(main([-0.37, 0.42]))
+"""
+
+
+# Задание 6
+def main(arr):
+    m = [
+        [1999, 'BOO', 1969, 0],
+        [1999, 'BOO', 1986, 1],
+        [1999, 'BOO', 2000, 2],
+        [1999, 'NIX', 1992, 3],
+        [1999, 'NIX', 1987, 4],
+        [1999, 'NIX', 1986, 5],
+        [1985, 'BOO', 1969, 6],
+        [1985, 'BOO', 1986, 7],
+        [1985, 'BOO', 2000, 8],
+        [1985, 'NIX', 1992, 9],
+        [1985, 'NIX', 1987, 10],
+        [1985, 'NIX', 1986, 11],
+    ]
+    for i in range(12):
+        if arr[0] == m[i][0]:
+            if arr[1] == m[i][1] and arr[1] == 'BOO':
+                if arr[2] == m[i][2]:
+                    return m[i][3]
+            elif arr[1] == m[i][1] and arr[1] == 'NIX':
+                if arr[3] == m[i][2]:
+                    return m[i][3]
+
+
+print(main([1985, 'NIX', 1986, 1986]))
