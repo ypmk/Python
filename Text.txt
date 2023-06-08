@@ -1,0 +1,45 @@
+import numpy as np
+result = sorted(result, key=lambda a:a[1])
+result = np.array(result)
+result = result.transpose()
+
+
+
+
+return tuple(map(str, (c1, c2, c3, c5))) кортеж
+
+
+
+l2 = int(s['L2'], 16)
+
+
+https://gist.github.com/worldbeater/00c4e744da52c0b68796cf15a6209ce9
+
+
+полосочки заворачиваются сверху - math.ceil()
+снизу - math.floor()
+
+
+Ограничивайте длину строк 79 символами (а длину строк документации и комментариев — 72 символами).
+В общем случае не используйте обратный слеш в качестве перехода на новую строку. Используйте доступное в Python явное
+объединение строк посредством круглых и фигурных скобок. Если необходимо, можно добавить дополнительную пару скобок
+вокруг выражения.
+
+
+import os
+.
+.
+class MyClass:
+.
+def __init__(self):
+  self.name = 'My name'
+  .
+  def f(self):
+      return 'hello world'
+  .
+  .
+def MyFunc():
+i = 12345
+return i
+.
+myclass = MyClass()
